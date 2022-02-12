@@ -5,16 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail</title>
+    <style>
+      body{
+        margin: 0 0;
+      }
+      #logo {
+      height: 60px;
+      width: 60px;
+    }
+    #hotel-img{
+      height: 500px;
+      width: 500px;
+    }
+    .social-media-image{
+      height: 20px;
+      width: 22px;
+    }
+    </style>
   </head>
   <body>
-    <div>
       <!-- Header Begins -->
-      <div>
         <header>
           <div>
             <a href="/index.html">
               <img
                 src="/assests/images/logo.png"
+                id="logo"
                 height="200px"
                 width="150px"
                 alt="logo"
@@ -23,7 +39,6 @@
             <a href="login.html" target="_Blank">Login</a>
           </div>
         </header>
-      </div>
       <!-- Header Ends -->
 
       <!-- Main Begins -->
@@ -32,24 +47,24 @@
           <!-- first Div start -->
           <div>
             <img
-              src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
+              src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="hotel-img"
               alt="Radison Blu"/>
               <br/>
-            <form action="" method="get">
+            <form action="" method="get" >
                 <label for="Adults">Adults:
                 <input type="number" id="Adults" name="Adults" min="1" required="required">
                 </label><br>
                 <label for="Name">Name:
-                    <input type="text" name="Name" id="Name">
+                    <input type="text" name="Name" id="Name" required="required">
                 </label><br>
                 <label for="Date">From Date:
-                    <input type="date" name="Date" id="Date">
+                    <input type="date" name="Date" id="Date" required="required">
                 </label><br>
                 <label for="ToDate">ToDate:
-                    <input type="date" name="ToDate" id="ToDate">
+                    <input type="date" name="ToDate" id="ToDate" required="required">
                 </label><br>
                 <label for="Total">Total:<input type="text" disabled="disabled"></label><br>
-              <a href="/payment.html"><input type="button" value="Submit"></a>
+              <a href="/payment.html"><button type="button">Book Now</button></a>
             </form>
             <h2>Radisson Blu Hotel</h2>
             <p>RATING</p>
@@ -83,7 +98,6 @@
       <!-- Main Ends -->
 
       <!-- Footer Begins -->
-      <div>
         <footer>
           <!-- first div starts -->
           <div>
@@ -95,6 +109,7 @@
             <a href="https://www.facebook.com/" target="_blank"
               ><img
                 src="/assests/images/facebook.png"
+                class="social-media-image"
                 height="20px"
                 width="22px"
                 alt="facebook"
@@ -102,6 +117,7 @@
             <a href="https://www.instagram.com/" target="_blank"
               ><img
                 src="/assests/images/instagram.png"
+                class="social-media-image"
                 height="20px"
                 width="22px"
                 alt="instagram"
@@ -109,6 +125,7 @@
             <a href="https://twitter.com/" target="_blank"
               ><img
                 src="/assests/images/twitter.png"
+                class="social-media-image"
                 height="20px"
                 width="22px"
                 alt="twitter"
@@ -119,8 +136,6 @@
           <div>&copy;2020 ROOM SEARCH PVT LTD</div>
           <!-- third div ends -->
         </footer>
-      </div>
       <!-- Footer Ends -->
-    </div>
   </body>
 </html>
