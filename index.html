@@ -9,6 +9,7 @@
     <style>
         body {
             margin: 0 0;
+            background-color: #e0e0e0;
         }
 
         #logo {
@@ -19,10 +20,26 @@
         .cityimages {
             height: 150px;
             width: 150px;
+            padding: 4%;
+            border-radius: 25%;
         }
         .social-media-image{
             height: 20px;
             width: 22px;
+        }
+        header,footer{
+            background-color: rosybrown;
+        }
+        #searchdiv{
+            background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
+            height: 380px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #citycard{
+            margin-left: 15%;
+            margin-right: 15%;
         }
     </style>
 </head>
@@ -45,12 +62,12 @@
     <div>
         <main>
             <!-- search bar starts -->
-            <div>
+            <div id="searchdiv">
                 <input type="text" name="search" id="search" placeholder="City" />
             </div>
             <!-- search bar ends -->
             <!-- location photo starts -->
-            <div>
+            <div id="citycard">
                 <a href="/list.html"><img
                         src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"
                         class="cityimages" alt="new-delhi" height="300px" width="300px" /></a>

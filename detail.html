@@ -1,141 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Detail</title>
-    <style>
-      body{
-        margin: 0 0;
-      }
-      #logo {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail</title>
+  <style>
+    body {
+      margin: 0 0;
+      background-color: #e0e0e0;
+    }
+
+    #logo {
       height: 60px;
       width: 60px;
     }
-    #hotel-img{
+
+    #hotel-img {
       height: 500px;
       width: 500px;
+      margin: 2% 4% 0% 4%;
     }
-    .social-media-image{
+
+    .social-media-image {
       height: 20px;
       width: 22px;
     }
-    </style>
-  </head>
-  <body>
-      <!-- Header Begins -->
-        <header>
-          <div>
-            <a href="/index.html">
-              <img
-                src="/assests/images/logo.png"
-                id="logo"
-                height="200px"
-                width="150px"
-                alt="logo"
-              />
-            </a>
-            <a href="login.html" target="_Blank">Login</a>
-          </div>
-        </header>
-      <!-- Header Ends -->
 
-      <!-- Main Begins -->
+    header,
+    footer {
+      background-color: rosybrown;
+    }
+
+    #Booking-details {
+      margin: 0% 4% 1% 4%;
+    }
+    .hotel-description{
+      margin: 1% 4% 2% 4%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header Begins -->
+  <header>
+    <div>
+      <a href="/index.html">
+        <img src="/assests/images/logo.png" id="logo" height="200px" width="150px" alt="logo" />
+      </a>
+      <a href="login.html" target="_Blank">Login</a>
+    </div>
+  </header>
+  <!-- Header Ends -->
+
+  <!-- Main Begins -->
+  <div>
+    <main>
+      <!-- first Div start -->
       <div>
-        <main>
-          <!-- first Div start -->
-          <div>
-            <img
-              src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="hotel-img"
-              alt="Radison Blu"/>
-              <br/>
-            <form action="" method="get" >
-                <label for="Adults">Adults:
-                <input type="number" id="Adults" name="Adults" min="1" required="required">
-                </label><br>
-                <label for="Name">Name:
-                    <input type="text" name="Name" id="Name" required="required">
-                </label><br>
-                <label for="Date">From Date:
-                    <input type="date" name="Date" id="Date" required="required">
-                </label><br>
-                <label for="ToDate">ToDate:
-                    <input type="date" name="ToDate" id="ToDate" required="required">
-                </label><br>
-                <label for="Total">Total:<input type="text" disabled="disabled"></label><br>
-              <a href="/payment.html"><button type="button">Book Now</button></a>
-            </form>
-            <h2>Radisson Blu Hotel</h2>
-            <p>RATING</p>
-            <p>5 Star</p>
-          </div>
-          <!-- first div ends -->
-          <!-- second div starts -->
-          <div>
-            <p>AMENITIES</p>
-            <ul>
-              <li>Room service</li>
-              <li>Restaurant</li>
-              <li>Business center</li>
-              <li>Fitness center</li>
-              <li>Pool</li>
-            </ul>
-          </div>
-          <!-- second div ends -->
-          <!-- third div starts -->
-          <div>
-            <h5>Description</h5>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Architecto delectus quia magni dolorem nisi illo nam quas porro
-              totam ipsa.
-            </p>
-          </div>
-          <!-- third div ends -->
-        </main>
+        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="hotel-img"
+          alt="Radison Blu" />
+        <br />
+        <div id="Booking-details">
+          <form action="/payment.html" method="get">
+            <label for="Adults">Adults:</label>
+              <input type="number" id="Adults" name="Adults" min="1" required="required"/><br>
+            <label for="Name">Name:</label>
+              <input type="text" name="Name" id="Name" required="required"/> <br>
+            <label for="Date">From Date:</label>
+              <input type="date" name="Date" id="Date" required="required"/> <br>
+            <label for="ToDate">ToDate: </label>
+              <input type="date" name="ToDate" id="ToDate" required="required"/><br>
+            <label for="Total">Total:</label>
+              <input type="text" disabled="disabled"/><br>
+              <a href="/payment.html"><input type="button" value="Book Now"></input></a>
+          </form>
+        </div>
+        <div class="hotel-description">
+        <h2>Radisson Blu Hotel</h2>
+        <p>RATING</p>
+        <p>5 Star</p>
+        </div>
       </div>
-      <!-- Main Ends -->
+      <!-- first div ends -->
+      <!-- second div starts -->
+      <div class="hotel-description">
+        <p>AMENITIES</p>
+        <ul>
+          <li>Room service</li>
+          <li>Restaurant</li>
+          <li>Business center</li>
+          <li>Fitness center</li>
+          <li>Pool</li>
+        </ul>
+      </div>
+      <!-- second div ends -->
+      <!-- third div starts -->
+      <div class="hotel-description">
+        <h5>Description</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
+          delectus quia magni dolorem nisi illo nam quas porro totam ipsa.
+        </p>
+      </div>
+      <!-- third div ends -->
+    </main>
+  </div>
+  <!-- Main Ends -->
 
-      <!-- Footer Begins -->
-        <footer>
-          <!-- first div starts -->
-          <div>
-            <a href="/contact.html" target="_blank">Contact Us</a>
-          </div>
-          <!-- first div ends -->
-          <!-- second div starts -->
-          <div>
-            <a href="https://www.facebook.com/" target="_blank"
-              ><img
-                src="/assests/images/facebook.png"
-                class="social-media-image"
-                height="20px"
-                width="22px"
-                alt="facebook"
-            /></a>
-            <a href="https://www.instagram.com/" target="_blank"
-              ><img
-                src="/assests/images/instagram.png"
-                class="social-media-image"
-                height="20px"
-                width="22px"
-                alt="instagram"
-            /></a>
-            <a href="https://twitter.com/" target="_blank"
-              ><img
-                src="/assests/images/twitter.png"
-                class="social-media-image"
-                height="20px"
-                width="22px"
-                alt="twitter"
-            /></a>
-          </div>
-          <!-- second div ends -->
-          <!-- third div starts -->
-          <div>&copy;2020 ROOM SEARCH PVT LTD</div>
-          <!-- third div ends -->
-        </footer>
-      <!-- Footer Ends -->
-  </body>
+  <!-- Footer Begins -->
+  <footer>
+    <!-- first div starts -->
+    <div>
+      <a href="/contact.html" target="_blank">Contact Us</a>
+    </div>
+    <!-- first div ends -->
+    <!-- second div starts -->
+    <div>
+      <a href="https://www.facebook.com/" target="_blank"><img src="/assests/images/facebook.png"
+          class="social-media-image" height="20px" width="22px" alt="facebook" /></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="/assests/images/instagram.png"
+          class="social-media-image" height="20px" width="22px" alt="instagram" /></a>
+      <a href="https://twitter.com/" target="_blank"><img src="/assests/images/twitter.png" class="social-media-image"
+          height="20px" width="22px" alt="twitter" /></a>
+    </div>
+    <!-- second div ends -->
+    <!-- third div starts -->
+    <div>&copy;2020 ROOM SEARCH PVT LTD</div>
+    <!-- third div ends -->
+  </footer>
+  <!-- Footer Ends -->
+</body>
+
 </html>
