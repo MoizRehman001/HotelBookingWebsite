@@ -2,123 +2,209 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>List</title>
-  <style>
-    body {
-      margin: 0 0;
-      background-color: #e0e0e0;
-    }
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List</title>
+    <style>
+        *{
+            text-decoration: none;
+            color: black;
+        }
+        body {
+            margin: 0 0;
+            background-color: #e0e0e0;
+        }
 
-    #logo {
-      height: 60px;
-      width: 60px;
-    }
-    .hotel-images{
-      height: 200px;
-      width: 250px;
-    }
-    .social-media-image{
-      height: 20px;
-      width: 22px;
-    }
-    header,footer{
-      background-color: rosybrown;
-    }
-    .hotel-description{
-      margin: 2%;
-      background-color: rgb(132,136,139);
-      width: 40%;
-    }
-  </style>
+        #logo {
+            height: 60px;
+            width: 60px;
+        }
+
+        .hotel-images {
+            height: 200px;
+            width: 250px;
+        }
+
+        .social-media-image {
+            height: 20px;
+            width: 22px;
+        }
+
+       
+        .hotel-description {
+            margin: 3%;
+            background-color: rgb(132, 136, 139);
+            width: 40%;
+            display: inline-block;
+            text-decoration: none;
+             color: black;
+        }
+        
+
+        header {
+            background-color: rosybrown;
+            position: fixed;
+            width: 100%;
+            overflow: hide;
+            top: 0;
+        }
+
+        footer {
+            background-color: rosybrown;
+            position: fixed;
+            bottom: 0;
+            display: inline-block;
+            margin: auto;
+            width: 100%;
+            height: 50px;
+        }
+        #login {
+            position: absolute;
+            right: 0%;
+            top: 3%;
+            float: right;
+            line-height: 57px;
+            text-decoration: none;
+            margin-right: 2%;
+            color: black;
+        }
+
+        #copyright {
+            /* text-align: center; */
+            margin-left: 50%;
+            font-size: 10px;
+            position: fixed;
+            bottom: 0;
+        }
+
+        #contactUs {
+            position: relative;
+            top: 15px;
+            text-decoration: none;
+            margin-left: 1%;
+            margin-top: 40px;
+            line-height: 10px;
+            color: black;
+            bottom: 0;
+        }
+        #socialmediaimages  li{
+            position: relative;
+            top: -30px;
+            height: 20px;
+            width: 22px;
+            float: right;
+            margin-right: 1%;
+            margin-top: 1%;
+            list-style: none;
+        }
+        #mapView{
+            display: none;
+        }
+        #View{
+            /* text-align: center; */
+            /* display: inline-block; */
+            /* margin-top: 190px; */
+            margin-left: 30%;
+        }
+        #View li{
+            /* text-align: center; */
+            margin-left: 10%;
+            margin-top: 65px;
+            display: inline-block;
+            list-style: none;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
-  <!-- Header Begins -->
-  <header>
-    <div>
-      <a href="/index.html">
-        <img src="/assests/images/logo.png" id="logo" height="200px" width="150px" alt="logo" />
-      </a>
-      <a href="login.html" target="_Blank">Login</a>
-    </div>
-  </header>
-  <!-- Header Ends -->
+    <!-- Header Begins -->
+    <header>
+        <div>
+            <a href="/index.html">
+                <img src="/assests/images/logo.png" id="logo" height="200px" width="150px" alt="logo" />
+            </a>
+            <a href="login.html" target="_Blank" id="login">Login</a>
+        </div>
+    </header>
+    <!-- Header Ends -->
 
-  <!-- Content Begins -->
-  <div>
-    <main>
-      <!-- first Div start -->
-      <div>
-        <ul>
-          <li>
-            <a href="#list-image">List View</a>
-          </li>
-          <li>
-            <a href="#map-image">Map View</a>
-          </li>
-        </ul>
-      </div>
-      <!-- first div ends -->
-      <!-- second div starts -->
-      <div id="list-image">
-        <div class="hotel-description">
-        <a href="/detail.html"><img
-            src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" class="hotel-images" alt="Radison Blu" />
-          <h3>Radisson Blu Hotel</h3>
-          <p>5 Star</p>
-          <p>New Delhi</p>
-        </a>
-      </div>
-      <div class="hotel-description">
-        <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" class="hotel-images" alt="The Lalit Hotel" />
-        <h3>The Lalit New Delhi</h3>
-        <p>4.5 Star</p>
-        <p>New Delhi</p>
-      </div>
-      <div class="hotel-description">
-        <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" class="hotel-images" alt="Taj Palace" />
-        <h3>Taj Palace</h3>
-        <p>4.0 Star</p>
-        <p>New Delhi</p>
-      </div>
-      </div>
-      <!-- second div ends -->
-      <!-- third div starts -->
-      <div id="map-image">
-        <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="Map" />
-        <p>MAP VIEW</p>
-      </div>
-      <!-- third div ends -->
-    </main>
-  </div>
-  <!-- content Ends -->
-
-  <!-- Footer Begins -->
-  <footer>
-    <!-- first div starts -->
+    <!-- Content Begins -->
     <div>
-      <a href="/contact.html" target="_blank">Contact Us</a>
+        <main>
+            <!-- first Div start -->
+            <div id="View">
+                <ul>
+                    <li><a href="#hotelList">List View</a></li>
+                    <li><a href="#map-image">Map View</a></li>
+                </ul>
+            </div>
+            <!-- first div ends -->
+            <!-- second div starts -->
+            <div id="hotelList">
+                <ul>
+                <div class="hotel-description">
+                    <a href="/detail.html"><img
+                            src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"
+                            class="hotel-images" alt="Radison Blu" />
+                        <h3>Radisson Blu Hotel</h3>
+                        <p>5 Star</p>
+                        <p>New Delhi</p>
+                    </a>
+                </div>
+                <div class="hotel-description">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg"
+                        class="hotel-images" alt="The Lalit Hotel" />
+                    <h3>The Lalit New Delhi</h3>
+                    <p>4.5 Star</p>
+                    <p>New Delhi</p>
+                </div>
+                <div class="hotel-description">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg"
+                        class="hotel-images" alt="Taj Palace" />
+                    <h3>Taj Palace</h3>
+                    <p>4.0 Star</p>
+                    <p>New Delhi</p>
+                </div>
+            </ul>
+            </div>
+            <!-- second div ends -->
+            <!-- third div starts -->
+            <div id="mapView">
+                <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="Map" />
+                <p>MAP VIEW</p>
+            </div>
+            <!-- third div ends -->
+        </main>
     </div>
-    <!-- first div ends -->
-    <!-- second div starts -->
-    <div>
-      <a href="https://www.facebook.com/" target="_blank"><img src="/assests/images/facebook.png" class="social-media-image" height="20px"
-          width="22px" alt="facebook" /></a>
-      <a href="https://www.instagram.com/" target="_blank"><img src="/assests/images/instagram.png" class="social-media-image" height="20px"
-          width="22px" alt="instagram" /></a>
-      <a href="https://twitter.com/" target="_blank"><img src="/assests/images/twitter.png" class="social-media-image" height="20px" width="22px"
-          alt="twitter" /></a>
-    </div>
-    <!-- second div ends -->
-    <!-- third div starts -->
-    <div>&copy;2020 ROOM SEARCH PVT LTD</div>
-    <!-- third div ends -->
-  </footer>
+    <!-- content Ends -->
 
-  <!-- Footer Ends -->
+    <!-- Footer Begins -->
+    <footer>
+        <!-- first div starts -->
+        <div>
+            <a href="/contact.html" target="_blank" id="contactUs">Contact Us</a>
+        </div>
+        <!-- first div ends -->
+        <!-- second div starts -->
+        <div id="socialmediaimages">
+            <ul>
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="/assests/images/facebook.png"
+                    class="social-media-image" height="20px" width="22px" alt="facebook" /></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank"><img src="/assests/images/instagram.png"
+                    class="social-media-image" height="20px" width="22px" alt="instagram" /></a></li>
+            <li><a href="https://twitter.com/" target="_blank"><img src="/assests/images/twitter.png"
+                    class="social-media-image" height="20px" width="22px" alt="twitter" /></a></li>
+            </ul>
+        </div>
+        <!-- second div ends -->
+        <!-- third div starts -->
+        <div id="copyright">&copy;2020 ROOM SEARCH PVT LTD</div>
+        <!-- third div ends -->
+    </footer>
+
+    <!-- Footer Ends -->
 </body>
 
 </html>

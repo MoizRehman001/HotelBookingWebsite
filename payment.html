@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment</title>
     <style>
+        *{
+            text-decoration: none;
+            color: black;
+        }
         #logo {
             height: 60px;
             width: 60px;
         }
-
         body {
             margin: 0 0;
             background-color: #e0e0e0;
@@ -26,11 +29,21 @@
             height: 20px;
             width: 22px;
         }
-        footer,header{
+        header{
             background-color: rosybrown;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
         }
+        footer{
+            position:fixed;
+            background-color: rosybrown;
+            bottom: 0;
+            width: 100%;
+        }
+        
         #hotel-description{
-            position: relative;
             background-color: rgb(132,136,139);
             width: 50%;
             height: 20%;
@@ -47,6 +60,58 @@
             border-radius: 5px;
             padding : 1% 2%;
         }
+        #hotel-outer-description{
+            margin-top: 100px;
+        }
+        #details{
+            margin-bottom: 70px;
+        }
+        #login{
+            position:absolute;
+            right: 0%;
+            top: 3%;
+            float: right;
+            line-height: 57px;
+            text-decoration: none;
+            margin-right: 2%;
+            color: black;
+        }
+        #login{
+            position:absolute;
+            right: 0%;
+            top: 3%;
+            float: right;
+            line-height: 57px;
+            text-decoration: none;
+            margin-right: 2%;
+            color: black;
+        }
+        #copyright{
+            /* text-align: center; */
+            margin-left: 50%;
+            font-size: 10px;
+            position: fixed;
+            bottom: 0;
+        }
+        #contactUs{
+            position: relative;
+            top: 15px;
+            text-decoration: none;
+            margin-left: 1%;
+            margin-top: 40px;
+            line-height: 10px;
+            color: black;
+            bottom: 0;
+        }
+        .social-media-image{
+            position: relative;
+            top: -20px;
+            height: 20px;
+            width: 22px;
+            float: right;
+            margin-right: 1%;
+            margin-top: 1%;
+        }
     </style>
 </head>
 
@@ -58,7 +123,7 @@
                 <a href="/index.html">
                 <img src="/assests/images/logo.png" id="logo" height="200px" width="150px" alt="logo">
                 </a>
-                <a href="login.html" target="_Blank">Login</a>
+                <a href="login.html" target="_Blank" id="login"> Login</a>
             </div>
         </header>
         <!-- Header Ends -->
@@ -78,7 +143,7 @@
             </div>
                 <!-- first div ends -->
                 <!-- second div starts -->
-                <div>
+                <div id="details">
                     <!-- first inner div starts -->
                     <div id="customer-details">
                         <p><strong>Name:</strong>John Doe</p>
@@ -108,21 +173,21 @@
         <footer>
             <!-- first div starts -->
             <div>
-                <a href="/contact.html" target="_blank">Contact Us</a>
+                <a href="/contact.html" target="_blank" id="contactUs">Contact Us</a>
             </div>
             <!-- first div ends -->
             <!-- second div starts -->
-            <div>
-                <a href="https://www.facebook.com/" target="_blank"><img src="/assests/images/facebook.png" class="social-media-image"
-                        height="20px" width="22px" alt="facebook"></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src="/assests/images/instagram.png" class="social-media-image"
-                        height="20px" width="22px" alt="instagram"></a>
-                <a href="https://twitter.com/" target="_blank"><img src="/assests/images/twitter.png" class="social-media-image" height="20px"
-                        width="22px" alt="twitter"></a>
+            <div id="socialmediaimage">
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="/assests/images/facebook.png" height="20px" width="22px" class="social-media-image" alt="facebook" /></a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="/assests/images/instagram.png" height="20px" width="22px" class="social-media-image" alt="instagram" /></a>
+                <a href="https://twitter.com/" target="_blank">
+                    <img src="/assests/images/twitter.png" height="20px" width="22px" class="social-media-image" alt="twitter" /></a>
             </div>
             <!-- second div ends -->
             <!-- third div starts -->
-            <div>
+            <div id="copyright">
                 &copy;2020 ROOM SEARCH PVT LTD
             </div>
             <!-- third div ends -->
