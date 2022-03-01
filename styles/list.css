@@ -1,31 +1,99 @@
+body a{
+    text-decoration: none;
+}
+#viewLink{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6em;   
+}
 .hotelList img{
     height: 200px;
     width: 250px;
-}  
+}
+#listView{
+    display: flex;
+    flex-wrap: wrap;
+}
 .hotelList{
-    background-color: rgb(132,136,139);
-    margin: 2%;
-    width: 40%;
-    display: inline-block;
-    text-decoration: none;
+    background-color: lightgrey;
+    width: 35em;
+    margin: 3em;
+    display: flex;
     color: black;
+    text-decoration: none;
 }
-#content1{
-    margin-top: 6%;
+.hotelList:hover{
+    background-color: rosybrown;
+    text-decoration: none;
 }
-.firstlist{
-    margin-left: 36%;
+.info{
+    margin-left: 4%;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-#content ul li{
-    text-align: center; 
+#content ul li{ 
     display: inline;
-    list-style-type: none;
-    margin-left: 30px;
-}
+    margin-left: 2em;
+    }
+
 #content ul li a{
     text-decoration: none;
-    color: black;
+    color: black;   
 }
-#mapView{
-    display: none;
+.checked{
+    color: orange;
 }
+
+@media only screen and (min-width:576px) and ( max-width:768px) {
+    #listView{
+      display: flex;
+      flex-direction: column;
+    }
+    .card {
+      max-width: 180px;
+    }
+    .hotelList {
+      display: flex;
+      width: 80%;
+    }
+    #mapView img{
+      width: 90%;
+    }
+    #mapView{
+      display: flex;
+      justify-content: center;
+    }
+  }
+  @media only screen and (max-width:576px){
+    .card {
+      width: 100%;
+    }
+    .viewLink{
+      display: flex;
+      justify-content: space-around
+    }
+   .info{
+     display: flex;
+     flex-direction: column;
+     font-size: px;
+   }
+    .hotelList {
+      margin: 10% 10%;
+      display: flex;
+      flex-direction: column;
+     flex-grow: 2;
+      width: 100%;
+
+    }
+    #mapView img{
+      width: 90%;
+    }
+    #mapView{
+      display: flex;
+      justify-content: center;
+    }
+
+  } 

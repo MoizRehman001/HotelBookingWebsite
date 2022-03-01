@@ -2,187 +2,148 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <link rel="stylesheet" href="fonts.css">
-    <style>
-        *{
-            font-family:  'Ubuntu', sans-serif;
-        }
-        body {
-            margin: 0 0;
-            background-color: #e0e0e0;
-        }
-
-        #logo {
-            height: 60px;
-            width: 60px;
-        }
-
-        .cityimages {
-            height: 150px;
-            width: 150px;
-            padding: 4%;
-            border-radius: 25%;
-        }
-        .social-media-image{
-            position: relative;
-            top: -20px;
-            height: 20px;
-            width: 22px;
-            float: right;
-            margin-right: 1%;
-            margin-top: 1%;
-        }
-        header{
-            background-color: rosybrown;
-            position: fixed;
-            width: 100%;
-            overflow: hide;
-            top: 0;
-        }
-        footer{
-            background-color: rosybrown;
-            position: fixed;
-            bottom: 0;
-            display: inline-block;
-            margin :auto;
-            width:100%;
-        }
-        #searchdiv{
-            background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
-            height: 380px;
-            background-position: center;
-            background-size: cover;
-        }
-        #searchdiv input{
-            margin-top: 14.3%;
-            margin-left: 36%;
-            width: 380px;
-            padding: 10px;
-            border: 1px transparent;
-            border-radius: 12px;
-            font-size: 16px;
-        }
-        #citycard li{
-            margin-left: 3%;
-            margin-right: 3%;
-            display: inline-block;
-            list-style: none;
-        }
-        #citycard{
-            margin-left: 10%;            
-        }
-        .headerclass{
-            display: inline-block;
-        }
-        #login{
-            position:absolute;
-            right: 0%;
-            top: 3%;
-            float: right;
-            line-height: 57px;
-            text-decoration: none;
-            margin-right: 2%;
-            color: black;
-        }
-        #copyright{
-            /* text-align: center; */
-            margin-left: 50%;
-            font-size: 10px;
-            position: fixed;
-            bottom: 0;
-        }
-        #contactUs{
-            position: relative;
-            top: 15px;
-            text-decoration: none;
-            margin-left: 1%;
-            margin-top: 40px;
-            line-height: 10px;
-            color: black;
-            bottom: 0;
-        }
-        .viewmore{
-            height: 100px;
-            color: black;
-            text-decoration: none;
-            margin-left: 45%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/be61e954f2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Index</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
 </head>
 
 <body>
-    <!-- Header Begins -->
-    <div>
+
+  <!-- Header Div -->
+  <div id="wrapper">
     <header>
-        <div>
-            <header>
-                <div id="headerclass">
-                    <img src="/assests/images/logo.png" id="logo" height="200px" width="150px" alt="logo" />
-                    <a href="login.html" target="_self" id="login">Login</a>
-                </div>
-            </header>
-        </div>
+      <img src="assests\images\logo.png" alt="logo" class="logo" />
+      <a href="login.html" target="_self" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#login"
+        style="margin-right: 2em;">Login</a>
     </header>
+  </div>
+  <!-- Content Div -->
+  <div id="content">
+    <!-- Search bar begin -->
+    <div id="searchBar">
+      <div class="search">
+        <input type="text" placeholder="City">
+      </div>
     </div>
-    <!-- Header Ends -->
+    <!-- Search bar ends -->
+    <div id="cityCards">
+      <a href="list.html" target="_self">
+        <div class="cards"
+          style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg) ">
+          <div class="overlay">
+            <p style="text-decoration: none; color:  #f1f1f1;">Delhi</p>
+          </div>
+        </div>
+      </a>
 
-    <!-- Content Begins -->
-    <div>
-        <main>
-            <!-- search bar starts -->
-            <div id="searchdiv">
-                <input type="text" name="search" id="search" placeholder="City"/>
-            </div>
-            <!-- search bar ends -->
-            <!-- location photo starts -->
-            <div id="citycard">
-                <ul>
-                <li><a href="/list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg"
-                        class="cityimages" alt="new-delhi" height="300px" width="300px" /></a></li>
-                <li><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" class="cityimages"
-                    alt="goa" height="300px" width="300px" /></li>
-                <li><img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" class="cityimages"
-                    alt="hyderabad" height="300px" width="300px" /></li>
-                <li><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg
-                    " class="cityimages" alt="kolkata" height="300px" width="300px" /></li>
-                </ul>
-            </div>
-            <div class="viewmore">
-                <a href="#" style="color: black;" >View more>></a>
-            </div>
-        </main>
+      <div class="cards"
+        style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg) ;">
+        <div class="overlay">
+          <p style="color:  #f1f1f1;">Goa</p>
+        </div>
+      </div>
+
+
+      <div class="cards"
+        style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg) ;">
+        <div class="overlay">
+          <p style="color:  #f1f1f1;">Hyderabad</p>
+        </div>
+      </div>
+
+      <div class="cards"
+        style="background-image:url(https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg) ;">
+        <div class="overlay">
+          <p style="color:  #f1f1f1;">Kolkata</p>
+        </div>
+      </div>
     </div>
-    <!-- location pic ends here -->
-    <!-- Contents Ends -->
+    <div id="view">
+      <a href="#" class="btn btn-secondary">View More</a></br>
+    </div>
+    <!-- Login modal begin -->
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Please Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="text-align: center; ">
+            <label for="UserName" style="margin-left: 1em 0em 1em 2em; ">Username:</label>
+            <input type="text" placeholder="Enter Username" name="username" required style="margin-left: 3em;">
+            <br>
+            <label for="Password" style="margin: 1em 0em 1em 2em;">Password :</label>
+            <input type="password" placeholder="Enter Password" name="password" required style="margin-left: 3em;">
+            <br>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
 
-    <!-- Footer Begins -->
-    <div>
-    <footer id="footer">
-        <!-- first div starts -->
-        <div id="footerdiv1">
-            <a href="/contact.html" target="_self" id="contactUs">Contact Us</a>
+            <button type="button" class="btn btn-primary">Login</button>
+          </div>
         </div>
-        <!-- first div ends -->
-        <!-- second div starts -->
-        <div id="socialmediaimage">
-            <a href="https://www.facebook.com/" target="_blank">
-                <img src="/assests/images/facebook.png" height="20px" width="22px" class="social-media-image" alt="facebook" /></a>
-            <a href="https://www.instagram.com/" target="_blank">
-                <img src="/assests/images/instagram.png" height="20px" width="22px" class="social-media-image" alt="instagram" /></a>
-            <a href="https://twitter.com/" target="_blank">
-                <img src="/assests/images/twitter.png" height="20px" width="22px" class="social-media-image" alt="twitter" /></a>
+      </div>
+    </div>
+
+    <!-- Login modal modal id end -->
+
+    <!-- Contact-us modal begin -->
+    <div class="modal fade" id="contact-us" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Get in touch</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <span>Thank you for reaching out!!!</span><br>
+            <span>Please enter you email and we get back to you.</span><br>
+            <form>
+              <label for="email">Email:</label>
+              <input type="email" placeholder="Enter your email id" name="email" required>
+            </form>
+          </div>
+          <div class="modal-footer">
+
+            <button type="submit" formaction="index.html" class="btn btn-primary">Submit</button>
+          </div>
         </div>
-        <!-- second div ends -->
-        <!-- third div starts -->
-        <div id="copyright">&copy;2020 ROOM SEARCH PVT LTD</div>
-        <!-- third div ends -->
+      </div>
+    </div>
+
+
+
+    <!-- Footer Div -->
+
+    <footer>
+      <div id="contact">
+        <a href="contact.html" target="_self" class="btn btn-info btn-sm" data-bs-toggle="modal"
+          data-bs-target="#contact-us"><span>Contact Us</span></a>
+      </div>
+
+      <div class="copyright">
+        <span>&copy; 2020 ROOM SEARCH PVT. LTD.</span>
+      </div>
+
+      <div id="social-media">
+        <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" alt="facebook"></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" alt="instagram"></a>
+        <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" alt="twitter"><br></a>
+      </div>
     </footer>
-    </div>
-    <!-- Footer Ends -->
+  </div>
 </body>
 
 </html>
