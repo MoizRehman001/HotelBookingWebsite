@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="styles/payment.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
+    <script src="/scripts/common.js"></script>
+    <script src="/scripts/payment.js"></script>
 </head>
 <body>
     <!-- Header Div -->
@@ -23,7 +25,7 @@
 			</div>
         <header>
             <a href="index.html"><img src = "assests\images\logo.png" alt="logo"></a>
-                <a href="login.html" target="_self" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#login" style="margin-right: 2em;"><span>LOGIN</span></a>
+                <a href="login.html" target="_self" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#login" style="margin-right: 2em;" onclick="enablePayNow()" id="HeaderLogin"><span>LOGIN</span></a>
             </header>
 
     <!-- Content Div -->
@@ -51,36 +53,35 @@
             <p><b>Total Amount: </b>Rs 10000</p>
         </div>
         <div class="PayButton">
-            <button class="btn btn-danger" disabled style="color: black;"><span>Pay Now</span></button>
+            <button id="PayNow" class="btn btn-danger"  disabled=true  onclick="fn1()" style="color: black; background-color: green;"><span>Pay Now</span></button>
         </div>
     </div>
 </div>
     <!-- Footer Div -->
 
     <!-- Login modal begin -->
-			<div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h5 class="modal-title" id="exampleModalLabel" >Please Login</h5>
-					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<div class="modal-body" style="text-align: center; ">
-						<label for="UserName" style="margin-left: 3em; ">Username:</label>
-						<input type="text" placeholder="Enter Username" name="username" required style="margin-left: 4em;">
-						<br>
-						<label for="Password" style="margin: 1.5em 0em 1em 3em;">Password :</label>
-						<input type="password" placeholder="Enter Password" name="password" required style="margin-left: 4em;">
-						<br>
-					</div>
-					<div class="modal-footer" style="padding-right: 13em;">
+    <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Please Login</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="text-align: center; ">
+            <label for="UserName" style="margin-left: 1em 0em 1em 2em; ">Username:</label>
+            <input id="UserName" type="text" placeholder="Enter Username" name="username" required style="margin-left: 3em;">
+            <br>
+            <label for="Password" style="margin: 1em 0em 1em 2em;">Password :</label>
+            <input id="PasswordName" type="password" placeholder="Enter Password" name="password" required style="margin-left: 3em;">
+            <br>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
 
-					  <button type="button" class="btn btn-primary">Login</button>
-					</div>
-				  </div>
-				</div>
-			  </div>	
-
+            <button id="button" onclick="LoginToLocalStorage()" type="button" class="btn btn-primary">LOGIN</button>
+          </div>
+        </div>
+      </div>
+    </div>
 			<!-- Login modal modal id end -->
 
             <!-- Contact-us modal begin -->

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/list.css">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
+    <script src="/scripts/common.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@
         <header>
             <a href="index.html"><img src="assests\images\logo.png" alt="logo" />
                 <a href="login.html" target="_self" class="btn btn-light btn-sm" data-bs-toggle="modal"
-                    data-bs-target="#login" style="margin-right: 2em;">Login</a>
+                    data-bs-target="#login" style="margin-right: 2em;" id="HeaderLogin">LOGIN</a>
         </header>
     </div>
     <!-- Content Div -->
@@ -139,20 +140,20 @@
                 </div>
                 <div class="modal-body" style="text-align: center; ">
                     <label for="UserName" style="margin-left: 3em; ">Username:</label>
-                    <input type="text" placeholder="Enter Username" name="username" required style="margin-left: 4em;">
+                    <input id="UserName" type="text" placeholder="Enter Username" name="username" required style="margin-left: 4em;">
                     <br>
                     <label for="Password" style="margin: 1.5em 0em 1em 3em;">Password :</label>
-                    <input type="password" placeholder="Enter Password" name="password" required
+                    <input id="PasswordName" type="password" placeholder="Enter Password" name="password" required
                         style="margin-left: 4em;">
                     <br>
                 </div>
                 <div class="modal-footer" style="padding-right: 13em;">
 
-                    <button type="button" class="btn btn-primary">Login</button>
+                    <button id="button" onclick="LoginToLocalStorage()" type="button" class="btn btn-primary">Login</button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
 
     <!-- Login modal modal id end -->
 
